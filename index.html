@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>gj</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		 <script type="text/javascript">
+      // in 关键字
+      //1.最常用于是 for in 循环中
+      //最常用于是 for in 循环中遍历
+      //2.判断属性是否存在对象中
+      // 语法  属性名 in 对象
+
+
+      //对象的建为字符串
+        var obj={
+        	name:"张学友",
+        	age:18
+        }; 
+        // obj.prototype.jj="jh";
+        for(var k in obj){
+     
+        	console.log(k)
+        }//name， age 返回键名（）字符串类型）
+       function He(){
+
+       }
+        He.prototype={
+          dd:"dj",
+          gg:"gj",
+          jj:obj
+        }
+        var hh=new He();
+          for(var  i in hh){
+            var kk={};
+                kk[i]=hh[i];
+          console.log(i)
+        }
+          // 2，返回boolean值
+          //注意使用in时，属性为字符串需要".."双引号划起来
+         var jh="name" in obj;
+          console.log(jh)//ture
+           // //这个时候name当成是一个变量，不报错 underfind是因为window里面有name属性,
+           var lo= name in obj;
+            console.log(lo)//fales
+ 
+         var  arr=[1,2,7,3,4,5];
+         console.log( "0" in arr)//ture
+         //这里会做一个隐士类型转化
+         console.log( 0 in arr)//ture 
+         //注意：in 关键字操作数组时判断的是索引值是否存在
+         console.log(7 in arr)//fales
+         //如何判断数组中是否存在制定的值
+         //1.for 循环 找到就输出
+         //2.indexof()返回值是指定数字的索引值，没有找到返回-1
+         console.log(arr.indexOf(7))//1
+
+          console.log(arr.indexOf(8))//-1
+
+          var a="25155.232121hh"
+
+          console.log(parseFloat(a))
+          console.log(parseInt(a))  
+
+
+
+
+
+
+
+
+          // function gg(){
+          //   var arr=[];
+          //   arr.push(arguments[0]);
+          //   for (var  i= 0; i<arr.length; i++) {
+          //       for(var j =1; j<arguments.length;j++){
+          //           if(arr[i]=arguments[j]){
+          //             flag=1
+          //             break
+          //           }else{
+          //             flag=0
+          //           }
+          //            if(flag=0){
+          //          arr.push(arguments[j]) 
+          //       }
+                 
+          //       }
+          //   }
+          //   return arr
+          // };
+
+          // console.log(gg(15,78,45,7,78,45,75))
+var arr = [1,23,1,1,1,3,23,5,6,7,9,9,8,5];
+ function rep(arr) {
+     var ret = [];
+     for (var i = 0; i < arr.length; i++) {
+         if (arr.indexOf(arr[i]) == i) {
+             ret.push(arr[i]);
+             console.log(arr.indexOf(arr[i]) )
+         }
+     }
+     return ret;
+}
+console.log(rep(arr))
+          </script>
+       
+
+	</body>
+</html> 
