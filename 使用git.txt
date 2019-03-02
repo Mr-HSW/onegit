@@ -14,3 +14,12 @@
 
 
 8. git reset --hard  id  {id就是版本号}
+ 
+9, git branch   查看当前分支
+
+10， git branch 分支名字      新建一个分支
+
+11.git  checkout 分支名     跳转到分支
+
+12git merge 分支名1       把分支名1合并到当前分分支上
+
