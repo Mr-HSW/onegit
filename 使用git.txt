@@ -16,10 +16,42 @@
 8. git reset --hard  id  {id就是版本号}
  
 9, git branch   查看当前分支
+ 
+先创建分支再进行开发
 
 10， git branch 分支名字      新建一个分支
 
 11.git  checkout 分支名     跳转到分支
 
 12git merge 分支名1       把分支名1合并到当前分分支上
+  
+合并完后要进行提交仓库
+
+13.删除分支，不能在当前分支上删除当前分支，要去当前分支的上一级进行删除
+   git branch -d 分支名  （删除失败可能是上次任务没有进行提交）
+                
+   git branch -D 分支名 （进行强制删除，任务不完成时，删除有风险）
+
+                             多人开发，共享仓库
+
+如何创建远程仓库：
+（1），仓库地址是（.git）结尾的目录，如：xxxx.git
+（2），必须是一个裸仓库，没有工作目录的仓库，看不见工作区。代码：git init --bare（创建裸仓）
+步骤：在桌面打开git，输入：ssh 服务器地址，输入yes，输入密码，输入：pwd可查看当前文件路径，
+输入：mkdir cangkku.git 创建一个名为cangku的目录，输入：cd cangku.git,切换到cangku文件，git init --bare创建裸仓
+
+1.git push 远程仓库地址：前文件路径 master  将master共享到远程仓库
+ 
+远程仓库地址过长难记处理：
+    git  remote add  仓库地址别名1  真实远程仓库地址：前文件路径2（仓库地址别名1 将代表 真实远程仓库地址：前文件路径2） 
+
+下载文件方法1：先创建新文件夹，在git init ，创建本地仓库在pull
+             git pull 远程仓库地址：前文件路径 master  将master下载到本地电脑
+
+下载文件方法2：
+直接 git clone 远程仓库地址：前文件路径，本地将或许远程文件cangkku.git，本地将多出cangkku文件夹
+默认操作：为将 远程仓库地址：前文件路径 保存为 origin
+
+
+
 
